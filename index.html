@@ -96,12 +96,22 @@
             text-align: center;
         }
 
-        .about {
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .features div {
             background: #fff;
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 2rem;
+        }
+
+        .features div h3 {
+            color: #555;
+            margin-bottom: 1rem;
         }
 
         .testimonials {
@@ -192,27 +202,6 @@
         footer p {
             font-size: 0.9rem;
         }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .testimonials-slider {
-                flex-direction: column;
-                gap: 1.5rem;
-                animation: none; /* Stop animation for smaller screens */
-            }
-
-            .testimonial {
-                flex: 1;
-                max-width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -220,7 +209,7 @@
         <h1>Nexa 44 LLC</h1>
         <nav>
             <a href="#about">About</a>
-            <a href="#features">Our Products</a>
+            <a href="#features">Our Focus</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -232,10 +221,21 @@
         <a href="#contact">Learn More</a>
     </section>
 
-    <section class="section about" id="about">
-        <h2>About Us</h2>
-        <div class="about">
-            <p>Nexa 44 LLC specializes in importing and delivering high-quality home and kitchen products to the U.S. market. We focus on improving everyday life by offering innovative and durable solutions for your home. Through Amazon FBA, we ensure fast and reliable delivery for all our customers.</p>
+    <section class="section features" id="features">
+        <h2>Our Focus</h2>
+        <div class="features">
+            <div>
+                <h3>Premium Quality</h3>
+                <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
+            </div>
+            <div>
+                <h3>Fast Shipping</h3>
+                <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
+            </div>
+            <div>
+                <h3>Customer Satisfaction</h3>
+                <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
+            </div>
         </div>
     </section>
 
@@ -251,6 +251,9 @@
                 <p>"Fast delivery and outstanding quality! Their customer service is top-notch."</p>
             </div>
             <div class="testimonial">
+               
+html
+Copy code
                 <h4>Sarah K.</h4>
                 <p>"Exceptional quality and great prices. Nexa 44 LLC truly exceeded my expectations!"</p>
             </div>
