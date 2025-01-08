@@ -96,48 +96,28 @@
             text-align: center;
         }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .features div {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .features div h3 {
-            color: #555;
-            margin-bottom: 1rem;
-        }
-
-        .about {
-            background: #fff;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
         .testimonials {
             background: #fff;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
         }
 
         .testimonials-slider {
             display: flex;
-            overflow-x: auto;
-            gap: 1rem;
-            scroll-behavior: smooth;
+            gap: 2rem;
+            animation: slide 15s linear infinite;
         }
 
-        .testimonials-slider::-webkit-scrollbar {
-            display: none;
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
         }
 
         .testimonial {
@@ -158,67 +138,12 @@
             font-style: italic;
         }
 
-        .contact {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact form {
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .contact form input,
-        .contact form textarea {
-            width: 100%;
-            margin-bottom: 1rem;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact form button {
-            background: #555;
-            color: #fff;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .contact form button:hover {
-            background: #777;
-        }
-
         footer {
             background: #555;
             color: #fff;
             text-align: center;
             padding: 1rem;
             margin-top: 3rem;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .testimonials-slider {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .testimonial {
-                flex: 1;
-                max-width: 100%;
-            }
         }
     </style>
 </head>
@@ -239,26 +164,6 @@
         <a href="#contact">Learn More</a>
     </section>
 
-    <section class="section about" id="about">
-        <h2>About Us</h2>
-        <p>Nexa 44 LLC specializes in importing and delivering high-quality home and kitchen products, tailored to enhance daily life. Our commitment to excellence ensures every customer experiences superior satisfaction through Amazon FBA services.</p>
-    </section>
-
-    <section class="section features" id="features">
-        <div>
-            <h3>Premium Quality</h3>
-            <p>Every product is crafted with the finest materials to ensure durability and functionality.</p>
-        </div>
-        <div>
-            <h3>Fast Shipping</h3>
-            <p>Thanks to Amazon FBA, we provide quick and reliable delivery to customers across the USA.</p>
-        </div>
-        <div>
-            <h3>Customer First</h3>
-            <p>Your happiness is our priority. We aim to simplify your life with innovative solutions.</p>
-        </div>
-    </section>
-
     <section class="section testimonials" id="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonials-slider">
@@ -274,18 +179,21 @@
                 <h4>Sarah K.</h4>
                 <p>"Exceptional quality and great prices. Nexa 44 LLC truly exceeded my expectations!"</p>
             </div>
+            <div class="testimonial">
+                <h4>Jane D.</h4>
+                <p>"These products have made my life so much easier. Highly recommend Nexa 44 LLC!"</p>
+            </div>
+            <div class="testimonial">
+                <h4>Mike R.</h4>
+                <p>"Fast delivery and outstanding quality! Their customer service is top-notch."</p>
+            </div>
         </div>
     </section>
 
-    <section class="section contact" id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <footer>
+        <p>&copy; 2025 Nexa 44 LLC. All Rights Reserved. Powered by Nexa 44 LLC.</p>
+    </footer>
+</body>
+</html>
 
-   
 
