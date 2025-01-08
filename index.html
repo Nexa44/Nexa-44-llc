@@ -112,10 +112,10 @@
         }
 
         @keyframes slide {
-            from {
+            0% {
                 transform: translateX(0);
             }
-            to {
+            100% {
                 transform: translateX(-100%);
             }
         }
@@ -144,6 +144,31 @@
             text-align: center;
             padding: 1rem;
             margin-top: 3rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .testimonials-slider {
+                flex-direction: column;
+                gap: 1.5rem;
+                animation: none; /* Stop animation for smaller screens */
+            }
+
+            .testimonial {
+                flex: 1;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -183,17 +208,12 @@
                 <h4>Jane D.</h4>
                 <p>"These products have made my life so much easier. Highly recommend Nexa 44 LLC!"</p>
             </div>
-            <div class="testimonial">
-                <h4>Mike R.</h4>
-                <p>"Fast delivery and outstanding quality! Their customer service is top-notch."</p>
-            </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Nexa 44 LLC. All Rights Reserved. Powered by Nexa 44 LLC.</p>
+        <p>&copy; 2025 Nexa 44 LLC. All Rights Reserved. Registered to Nexa 44 LLC.</p>
     </footer>
 </body>
 </html>
-
 
