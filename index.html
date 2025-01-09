@@ -93,21 +93,36 @@
 
         .section {
             padding: 3rem 1rem;
-            text-align: center;
-        }
-
-        .features img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
+            align-items: start;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .features-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .features img {
+            flex: 1;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features-text {
+            flex: 1;
         }
 
         .features div {
@@ -128,7 +143,6 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            position: relative;
         }
 
         .testimonials-slider {
@@ -195,11 +209,33 @@
             color: #fff;
             text-align: center;
             padding: 1rem;
-            margin-top: 3rem;
         }
 
         footer p {
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .features-content {
+                flex-direction: column;
+            }
+
+            .testimonials-slider {
+                flex-direction: column;
+                animation: none;
+            }
+
+            .testimonial {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -222,24 +258,26 @@
 
     <section class="section features" id="features">
         <h2>Our Focus</h2>
-        <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
-        <div class="features">
-            <div>
-                <h3>Premium Quality</h3>
-                <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
-            </div>
-            <div>
-                <h3>Fast Shipping</h3>
-                <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
-            </div>
-            <div>
-                <h3>Customer Satisfaction</h3>
-                <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
+        <div class="features-content">
+            <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
+            <div class="features">
+                <div>
+                    <h3>Premium Quality</h3>
+                    <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
+                </div>
+                <div>
+                    <h3>Fast Shipping</h3>
+                    <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
+                </div>
+                <div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="section testimonials" id="testimonials">
+        <section class="section testimonials" id="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonials-slider">
             <div class="testimonial">
@@ -266,10 +304,8 @@
     </section>
 
     <section class="section contact" id="contact">
-        <
-
-<h2>Contact Us</h2>
-    <form>
+        <h2>Contact Us</h2>
+        <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" rows="5" required></textarea>
@@ -282,4 +318,3 @@
     </footer>
 </body>
 </html>
-
