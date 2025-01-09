@@ -93,10 +93,27 @@
 
         .section {
             padding: 3rem 1rem;
-            text-align: center;
+        }
+
+        .focus-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .focus-section img {
+            flex: 1;
+            max-width: 100%;
+            max-height: 450px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .features {
+            flex: 1;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
@@ -114,38 +131,6 @@
             margin-bottom: 1rem;
         }
 
-        .testimonials {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-
-        .testimonials-slider {
-            display: flex;
-            gap: 2rem;
-            animation: scroll 10s linear infinite;
-        }
-
-        .testimonial {
-            flex: 0 0 300px;
-            background: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        .testimonial h4 {
-            color: #555;
-            margin-bottom: 0.5rem;
-        }
-
-        .testimonial p {
-            font-style: italic;
-        }
-
         footer {
             background: #555;
             color: #fff;
@@ -158,12 +143,9 @@
             font-size: 0.9rem;
         }
 
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
+        @media (max-width: 768px) {
+            .focus-section {
+                flex-direction: column;
             }
         }
     </style>
@@ -185,62 +167,35 @@
         <a href="#contact">Learn More</a>
     </section>
 
-    <section class="section features" id="features">
+    <section class="section" id="features">
         <h2>Our Focus</h2>
-        <div class="features">
-            <div>
-                <h3>Premium Quality</h3>
-                <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
-            </div>
-            <div>
-                <h3>Fast Shipping</h3>
-                <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
-            </div>
-            <div>
-                <h3>Customer Satisfaction</h3>
-                <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
-            </div>
-            <div>
-                <h3>Eco-Friendly Products</h3>
-                <p>We are committed to offering products that are environmentally friendly and sustainable.</p>
-            </div>
-            <div>
-                <h3>Innovative Design</h3>
-                <p>Our products feature innovative designs to make your daily life easier and more enjoyable.</p>
-            </div>
-            <div>
-                <h3>Reliable Support</h3>
-                <p>We provide reliable customer support to ensure your satisfaction with every purchase.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section testimonials" id="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonials-slider">
-            <div class="testimonial">
-                <h4>Jane D.</h4>
-                <p>"These products have made my life so much easier. Highly recommend Nexa 44 LLC!"</p>
-            </div>
-            <div class="testimonial">
-                <h4>Mike R.</h4>
-                <p>"Fast delivery and outstanding quality! Their customer service is top-notch."</p>
-            </div>
-            <div class="testimonial">
-                <h4>Sarah K.</h4>
-                <p>"Exceptional quality and great prices. Nexa 44 LLC truly exceeded my expectations!"</p>
-            </div>
-            <div class="testimonial">
-                <h4>Emily L.</h4>
-                <p>"I love their products! The attention to detail and quality is amazing."</p>
-            </div>
-            <div class="testimonial">
-                <h4>Chris M.</h4>
-                <p>"I’ve never experienced such fast shipping. Truly a company I can trust!"</p>
-            </div>
-            <div class="testimonial">
-                <h4>Paul W.</h4>
-                <p>"The products are fantastic, and the team is incredibly helpful. A five-star experience!"</p>
+        <div class="focus-section">
+            <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
+            <div class="features">
+                <div>
+                    <h3>Premium Quality</h3>
+                    <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
+                </div>
+                <div>
+                    <h3>Fast Shipping</h3>
+                    <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
+                </div>
+                <div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
+                </div>
+                <div>
+                    <h3>Eco-Friendly Products</h3>
+                    <p>We are committed to offering products that are environmentally friendly and sustainable.</p>
+                </div>
+                <div>
+                    <h3>Innovative Design</h3>
+                    <p>Our products feature innovative designs to make your daily life easier and more enjoyable.</p>
+                </div>
+                <div>
+                    <h3>Reliable Support</h3>
+                    <p>We provide reliable customer support to ensure your satisfaction with every purchase.</p>
+                </div>
             </div>
         </div>
     </section>
