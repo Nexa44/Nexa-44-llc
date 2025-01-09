@@ -107,16 +107,10 @@
             margin-bottom: 2rem;
         }
 
-        .features-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-        }
-
         .features img {
-            flex: 1;
-            max-width: 100%;
+            max-width: 80%;
+            margin: 0 auto 1.5rem;
+            display: block;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
@@ -145,6 +139,15 @@
             display: flex;
             gap: 2rem;
             animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
         }
 
         .testimonial {
@@ -220,8 +223,8 @@
                 font-size: 1rem;
             }
 
-            .features-content {
-                flex-direction: column;
+            .features img {
+                max-width: 100%;
             }
 
             .testimonials-slider {
@@ -254,21 +257,19 @@
 
     <section class="section features" id="features">
         <h2>Our Focus</h2>
-        <div class="features-content">
-            <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
-            <div class="features">
-                <div>
-                    <h3>Premium Quality</h3>
-                    <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
-                </div>
-                <div>
-                    <h3>Fast Shipping</h3>
-                    <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
-                </div>
-                <div>
-                    <h3>Customer Satisfaction</h3>
-                    <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
-                </div>
+        <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
+        <div class="features">
+            <div>
+                <h3>Premium Quality</h3>
+                <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
+            </div>
+            <div>
+                <h3>Fast Shipping</h3>
+                <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
+            </div>
+            <div>
+                <h3>Customer Satisfaction</h3>
+                <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
             </div>
         </div>
     </section>
