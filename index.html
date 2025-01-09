@@ -53,18 +53,6 @@
             text-align: center;
             color: #fff;
             padding: 1rem;
-            z-index: 1;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -1;
         }
 
         .hero h1 {
@@ -104,13 +92,18 @@
             margin-bottom: 2rem;
         }
 
+        .mission img, .products img, .process img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
         .testimonials {
             background: #fff;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            position: relative;
         }
 
         .testimonials-slider {
@@ -186,11 +179,29 @@
             color: #fff;
             text-align: center;
             padding: 1rem;
-            margin-top: 3rem;
         }
 
         footer p {
             font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .testimonials-slider {
+                flex-direction: column;
+                animation: none;
+            }
+
+            .testimonial {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -206,7 +217,7 @@
         </nav>
     </header>
 
-    <section class="hero" id="hero">
+    <section class="hero">
         <h1>Welcome to Nexa 44 LLC</h1>
         <p>Delivering premium home and kitchen solutions with Amazon FBA efficiency.</p>
         <a href="#contact">Learn More</a>
@@ -214,24 +225,25 @@
 
     <section class="section mission" id="about">
         <h2>Our Mission</h2>
-        <img src="https://raw.githubusercontent.com/Nexa44/Nexa-44-llc/refs/heads/main/DALL%C2%B7E%202025-01-08%2016.19.21%20-%20A%20sleek%20and%20modern%20image%20showcasing%20a%20team%20of%20diverse%20professionals%20collaborating%20in%20a%20bright%2C%20open%20office%20environment.%20The%20setting%20emphasizes%20teamwor.webp" alt="Our Mission" style="width: 100%; border-radius: 8px;">
+        <img src="https://raw.githubusercontent.com/Nexa44/Nexa-44-llc/refs/heads/main/DALL%C2%B7E%202025-01-08%2016.19.21%20-%20A%20sleek%20and%20modern%20image%20showcasing%20a%20team%20of%20diverse%20professionals%20collaborating%20in%20a%20bright%2C%20open%20office%20environment.%20The%20setting%20emphasizes%20teamwor.webp" alt="Our Mission">
         <p>At Nexa 44 LLC, we aim to simplify and enhance daily life by providing top-quality home and kitchen products delivered with unmatched reliability.</p>
     </section>
 
     <section class="section products" id="products">
         <h2>Our Products</h2>
-        <img src="https://raw.githubusercontent.com/Nexa44/Nexa-44-llc/refs/heads/main/DALL%C2%B7E%202025-01-08%2016.19.26%20-%20A%20high-quality%20kitchen%20countertop%20with%20premium%20utensils%20such%20as%20stainless%20steel%20pots%2C%20pans%2C%20and%20knives%2C%20neatly%20arranged.%20The%20setting%20includes%20a%20warm%20a.webp" alt="Our Products" style="width: 100%; border-radius: 8px;">
-        <p>We offer a variety of high-quality home and kitchen products designed to last and elevate your daily routines.</p>
+        <img src="https://raw.githubusercontent.com/Nexa44/Nexa-44-llc/refs/heads/main/DALL%C2%B7E%202025-01-08%2016.19.26%20-%20A%20high-quality%20kitchen%20countertop%20with%20premium%20utensils%20such%20as%20stainless%20steel%20pots%2C%20pans%2C%20and%20knives%2C%20neatly%20arranged.%20The%20setting%20includes%20a%20warm%20a.webp" alt="Our Products">
+        <p>We offer high-quality products designed to enhance your home and kitchen experience.</p>
     </section>
 
     <section class="section process" id="process">
         <h2>Our Process</h2>
-        <img src="https://raw.githubusercontent.com/Nexa44/Nexa-44-llc/refs/heads/main/DALL%C2%B7E%202025-01-08%2016.55.45%20-%20A%20clear%20and%20professional%20infographic%20featuring%20three%20distinct%2C%20sharp%20icons_%20a%20cargo%20ship%2C%20a%20warehouse%2C%20and%20a%20delivery%20truck.%20These%20icons%20are%20connected.webp" alt="Our Process" style="width: 100%; border-radius: 8px;">
-        <p>From importing to delivery, Nexa 44 LLC ensures a seamless and efficient process for all our products.</p>
-    </
-        </section>
+        <img src="https://raw.githubusercontent.com/Nexa44/Nexa-44-llc/refs/heads/main/DALL%C2%B7E%202025-01-08%2016.55.45%20-%20A%20clear%20and%20professional%20infographic%20featuring%20three%20distinct%2C%20sharp%20icons_%20a%20cargo%20ship%2C%20a%20warehouse%2C%20and%20a%20delivery%20truck.%20These%20icons%20are%20connected.webp" alt="Our Process">
+        <p>From import to delivery, Nexa 44 LLC ensures a seamless and efficient process.</p>
+    </section>
 
-    <section class="section testimonials" id="testimonials">
+    <
+
+<section class="section testimonials" id="testimonials">
         <h2>Testimonials</h2>
         <div class="testimonials-slider">
             <div class="testimonial">
