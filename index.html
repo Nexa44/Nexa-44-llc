@@ -96,6 +96,14 @@
             text-align: center;
         }
 
+        .features img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -127,15 +135,6 @@
             display: flex;
             gap: 2rem;
             animation: scroll 10s linear infinite;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
         }
 
         .testimonial {
@@ -223,6 +222,7 @@
 
     <section class="section features" id="features">
         <h2>Our Focus</h2>
+        <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
         <div class="features">
             <div>
                 <h3>Premium Quality</h3>
@@ -251,17 +251,24 @@
                 <p>"Fast delivery and outstanding quality! Their customer service is top-notch."</p>
             </div>
             <div class="testimonial">
-               
-html
-Copy code
                 <h4>Sarah K.</h4>
                 <p>"Exceptional quality and great prices. Nexa 44 LLC truly exceeded my expectations!"</p>
+            </div>
+            <div class="testimonial">
+                <h4>Emily L.</h4>
+                <p>"I love their products! The attention to detail and quality is amazing."</p>
+            </div>
+            <div class="testimonial">
+                <h4>Chris M.</h4>
+                <p>"I’ve never experienced such fast shipping. Truly a company I can trust!"</p>
             </div>
         </div>
     </section>
 
     <section class="section contact" id="contact">
-        <h2>Contact Us</h2>
+        <
+
+                <h2>Contact Us</h2>
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
