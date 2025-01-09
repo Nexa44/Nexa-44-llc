@@ -1,1 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa 44 LLC - Home & Kitchen Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background: #555;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        header nav a:hover {
+            color: #ccc;
+        }
+
+        .hero {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/Nexa44/Nexa-44-llc/refs/heads/main/DALL%C2%B7E%202025-01-08%2014.41.38%20-%20A%20modern%20and%20stylish%20kitchen%20scene%20with%20high-quality%20utensils%2C%20showcasing%20a%20clean%20and%20organized%20countertop%20with%20vibrant%20natural%20lighting.%20Perfect%20for%20.webp') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 1rem;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero a {
+            background: #555;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .hero a:hover {
+            background: #777;
+        }
+
+        .section {
+            padding: 3rem 1rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .features h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .features img {
+            max-width: 80%;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features div {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features div h3 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .testimonials {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .testimonials-slider {
+            display: flex;
+            gap: 2rem;
+            animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .testimonial {
+            flex: 0 0 300px;
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonial h4 {
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial p {
+            font-style: italic;
+        }
+
+        .contact {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .contact form button {
+            background: #555;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .contact form button:hover {
+            background: #777;
+        }
+
+        footer {
+            background: #555;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .features img {
+                max-width: 100%;
+            }
+
+            .testimonials-slider {
+                flex-direction: column;
+                animation: none;
+            }
+
+            .testimonial {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nexa 44 LLC</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#features">Our Focus</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <h1>Welcome to Nexa 44 LLC</h1>
+        <p>Delivering premium home and kitchen solutions with Amazon FBA efficiency.</p>
+        <a href="#contact">Learn More</a>
+    </section>
+
+    <section class="section features" id="features">
+        <h2>Our Focus</h2>
+        <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
+        <div class="features">
+            <div>
+                <h3>Premium Quality</h3>
+                <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
+            </div>
+            <div>
+                <h3>Fast Shipping</h3>
+                <p>Our partnership with Amazon FBA ensures fast, reliable delivery across the United States, getting your products to you in no time.</p>
+            </div>
+            <div>
+                <h3>Customer Satisfaction</h3>
+                <p>Your happiness is our priority. We aim to provide innovative, functional, and affordable solutions for every home.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial">
+                <h4>Jane D.</h4>
+                <p>"These products have made my life so much easier. Highly recommend Nexa 44 LLC!"</p>
+            </div>
+            <div class="testimonial">
+                <h4>Mike R.</h4>
+                <p>"Fast delivery and outstanding quality! Their customer service is top-notch."</p>
+            </div>
+            <div class="testimonial">
+                <h4>Sarah K.</h4>
+                <p>"Exceptional quality and great prices. Nexa 44 LLC truly exceeded my expectations!"</p>
+            </div>
+            <div class="testimonial">
+                <h4>Emily L.</h4>
+                <p>"I love their products! The attention to detail and quality is amazing."</p>
+            </div>
+            <div class="testimonial">
+                <h4>Chris M.</h4>
+                <p>"I’ve never experienced such fast shipping. Truly a company I can trust!"</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Nexa 44 LLC. All Rights Reserved. Registered to Nexa 44 LLC.</p>
+    </footer>
+</body>
+</html>
 
