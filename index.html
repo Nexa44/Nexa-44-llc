@@ -99,7 +99,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            align-items: start;
+            align-items: center;
         }
 
         .features h2 {
@@ -108,7 +108,8 @@
         }
 
         .features img {
-            max-width: 80%;
+            max-width: 100%;
+            height: auto;
             margin: 0 auto 1.5rem;
             display: block;
             border-radius: 8px;
@@ -138,7 +139,7 @@
         .testimonials-slider {
             display: flex;
             gap: 2rem;
-            animation: scroll 10s linear infinite;
+            animation: scroll 15s linear infinite;
         }
 
         @keyframes scroll {
@@ -212,6 +213,20 @@
 
         footer p {
             font-size: 0.9rem;
+        }
+
+        @media (min-width: 1024px) {
+            .features {
+                grid-template-columns: 1fr 2fr;
+            }
+
+            .features img {
+                max-width: 80%;
+            }
+
+            .testimonials-slider {
+                gap: 1rem;
+            }
         }
 
         @media (max-width: 768px) {
@@ -315,4 +330,3 @@
     </footer>
 </body>
 </html>
-
