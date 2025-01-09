@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexa 44 LLC - Home & Kitchen Solutions</title>
     <style>
-        /* General Reset */
         * {
             margin: 0;
             padding: 0;
@@ -54,6 +53,7 @@
             text-align: center;
             color: #fff;
             padding: 1rem;
+            z-index: 1;
         }
 
         .hero::after {
@@ -93,42 +93,23 @@
 
         .section {
             padding: 3rem 1rem;
+            text-align: center;
         }
 
         .features {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            align-items: center;
         }
 
-        .features h2 {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .features img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .features-grid div {
+        .features div {
             background: #fff;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
 
-        .features-grid div h3 {
+        .features div h3 {
             color: #555;
             margin-bottom: 1rem;
         }
@@ -139,6 +120,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
+            position: relative;
         }
 
         .testimonials-slider {
@@ -214,25 +196,11 @@
             color: #fff;
             text-align: center;
             padding: 1rem;
+            margin-top: 3rem;
         }
 
         footer p {
             font-size: 0.9rem;
-        }
-
-        @media (min-width: 768px) {
-            .features {
-                grid-template-columns: 1fr 2fr;
-            }
-
-            .features img {
-                max-width: 80%;
-                margin: 0 auto;
-            }
-
-            .features-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
         }
     </style>
 </head>
@@ -255,8 +223,7 @@
 
     <section class="section features" id="features">
         <h2>Our Focus</h2>
-        <img src="https://github.com/Nexa44/Nexa-44-llc/blob/main/pexels-tima-miroshnichenko-6169030.jpg?raw=true" alt="Our Focus">
-        <div class="features-grid">
+        <div class="features">
             <div>
                 <h3>Premium Quality</h3>
                 <p>We pride ourselves on delivering top-quality home and kitchen products designed to last and enhance your daily life.</p>
@@ -284,16 +251,11 @@
                 <p>"Fast delivery and outstanding quality! Their customer service is top-notch."</p>
             </div>
             <div class="testimonial">
+               
+html
+Copy code
                 <h4>Sarah K.</h4>
                 <p>"Exceptional quality and great prices. Nexa 44 LLC truly exceeded my expectations!"</p>
-            </div>
-            <div class="testimonial">
-                <h4>Emily L.</h4>
-                <p>"I love their products! The attention to detail and quality is amazing."</p>
-            </div>
-            <div class="testimonial">
-                <h4>Chris M.</h4>
-                <p>"I’ve never experienced such fast shipping. Truly a company I can trust!"</p>
             </div>
         </div>
     </section>
@@ -312,4 +274,5 @@
         <p>&copy; 2025 Nexa 44 LLC. All Rights Reserved. Registered to Nexa 44 LLC.</p>
     </footer>
 </body>
-</html> 
+</html>
+
